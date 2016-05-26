@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TextureAtlas imagePath="graphics/atlas.png" width="128" height="72">
+	<sprite n="runner1" x="0" y="0" w="36" h="75" />
+	<sprite n="runner2" x="0" y="76" w="50" h="63" />
+	<sprite n="runner3" x="0" y="139" w="55" h="65" />
+	<sprite n="runner4" x="0" y="204" w="54" h="65" />
+	<sprite n="runner5" x="0" y="271" w="54" h="67" />
+	<sprite n="runner6" x="0" y="338" w="48" h="67" />
+	<sprite n="runner7" x="0" y="405" w="48" h="67" />
+	<sprite n="runner8" x="0" y="469" w="53" h="64" />
+	<sprite n="runner9" x="0" y="533" w="53" h="64" />
+	<sprite n="runner10" x="0" y="597" w="43" h="64" />
+</TextureAtlas>
