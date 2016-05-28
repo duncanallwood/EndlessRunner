@@ -8,9 +8,9 @@ class Ground extends Entity
 	public function new(width:Int, height:Int) 
 	{
 		super();
-		var sprite = new TiledSpritemap("graphics/background2.png", 250, 225, width, height);
+		var sprite = new TiledSpritemap("graphics/Ground.png", 50, 50, width, height);
 		sprite.add("static", [0]);
-		sprite.add("moving", [0, 6, 1, 7, 2, 8, 3, 9, 4, 10, 5, 11], 12);
+		sprite.add("moving", [0,1,2,3,4,5,6,7,8,9]);
 		sprite.play("moving");
 		graphic = sprite;
 	}
