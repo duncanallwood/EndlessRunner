@@ -49,6 +49,8 @@ class Runner extends Entity
 		y = yPos;
 		
 		Input.define("JUMP", [Key.SPACE, Key.SHIFT, Key.CONTROL, Key.UP]);
+
+		setHitbox(spriteWidth, spriteHeight);
 	}
 	
 	public function getSpriteHeight():Int {
@@ -64,14 +66,18 @@ class Runner extends Entity
 		jumping();
 		crashing();
 		checkCollision();
+		moveBy(0, spdY * HXP.elapsed, "floor", true);
 		animate();
 	}
 	
 	function checkFloor():Void
 	{
-		//if (collide(solid, x, y + 1)) onSolid = true;
-		//else onSolid = false;
-		onSolid = true;
+		if (collide("floor", x, y + 1) != null) {
+			onSolid = true;
+		}
+		else {
+			onSolid = false;
+		}
 	}
 	
 	function gravity():Void
