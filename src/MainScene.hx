@@ -6,13 +6,13 @@ import com.haxepunk.HXP;
 import com.haxepunk.Scene;
 import com.haxepunk.utils.Input;
 import com.haxepunk.utils.Key;
-import src.Ground;
 
 
 class MainScene extends Scene
 {
 	private var player:Runner;
 	private var ground:Ground;
+	private var wall:Wall;
 	
 	public function new()
 	{
@@ -22,9 +22,13 @@ class MainScene extends Scene
 		var playerCentreXPos = 100;
 		var playerCentreYPos = Math.round(HXP.height/ 2);
 		createPlayer(playerCentreXPos, playerCentreYPos);
+		
 		var groundYPos = Math.round((playerCentreYPos + (player.getSpriteHeight())));
 		createGround(0, groundYPos);
 		
+		var wallXPos = HXP.width - 15;
+		var wallYPos = groundYPos - 48;
+		createWall(wallXPos, wallYPos);
 	}
 	
 	private function createPlayer(x:Int, y:Int):Void
@@ -39,5 +43,13 @@ class MainScene extends Scene
 		ground.x = x;
 		ground.y = y;
 		add(ground);
+	}
+
+	private function createWall(x:Int, y:Int):Void
+	{
+		wall = new Wall(500);
+		wall.x = x;
+		wall.y = y;
+		add(wall);
 	}
 }

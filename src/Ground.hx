@@ -1,4 +1,4 @@
-package src;
+package ;
 
 import com.haxepunk.Entity;
 import com.haxepunk.graphics.TiledSpritemap;
